@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contacts</h1>
+        <form id="addContactForm">
+            <h4>Add new contact</h4>
+            <input type="text" id="name" placeholder="Enter name" required>
+            <input type="text" id="phone" placeholder="Enter phone number" required>
+            <button type="submit">Add Contact</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+        <div class="search-container">
+            <input type="text" id="searchQuery" placeholder="Search by name" autocomplete="off">
+            <button id="clearSearch">Clear Search</button>
+        </div>
+
+        <select id="filterContacts">
+            <option value="default">Filter Contacts</option>
+            <option value="asc">Sort A-Z</option>
+            <option value="desc">Sort Z-A</option>
+        </select>
+
+        <div id="contactList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
